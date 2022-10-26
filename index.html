@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 910px;
+        height: 600px;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: rgb(190, 157, 9);
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+      }
+
+      table,
+      th,
+      td {
+        border: 3px solid rgb(190, 157, 9);
+      }
+
+      .vl {
+        border-left: 6px solid rgb(3, 3, 3);
+        width: 2%;
+        height: 600px;
+        top: 0;
+      }
+
+      .square {
+        height: 80px;
+        width: 80px;
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <table>
+            <tr>
+              <td>
+                <img
+                  src="images/img4.jpeg"
+                  style="width: 510px; height: 300px; padding: auto"
+                />
+              </td>
+              <td>
+                <img
+                  src="images/img5.jpg"
+                  style="width: 400px; height: 300px; padding: auto"
+                />
+              </td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td>
+                <img
+                  src="images/img3.jpg"
+                  style="width: 300px; height: 300px"
+                />
+              </td>
+              <td>
+                <img
+                  src="images/img2.jpg"
+                  style="width: 300px; height: 300px"
+                />
+              </td>
+              <td>
+                <img
+                  src="images/img1.jpg"
+                  style="width: 300px; height: 300px"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flip-card-back">
+          <div style="width: 49%;">
+            <h3>Absender</h3>
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <p>(Strasse und Hausnummer oder Postfach)</p>
+          </div>
+          <div class="vl"></div>
+          <div style="width: 49%;">
+            <div class="square" style="margin-top: 20px; margin-left: 80%;"></div>
+            <h3>Postkarte</h3>
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <p>(Strasse und Hausnummer oder Postfach)</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
